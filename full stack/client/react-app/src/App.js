@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import FromLabel from "./components/FromLabel";
 
 export default function App() {
   const [backendData, setBackendData] = useState([{}]);
@@ -12,6 +13,7 @@ export default function App() {
 
   return (
     <>
+      <FromLabel />
       {typeof backendData.users === "undefined" ? (
         <p>Loading...</p>
       ) : (
