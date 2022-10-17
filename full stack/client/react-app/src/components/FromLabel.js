@@ -1,9 +1,9 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-function BasicExample() {
+export default function BasicExample() {
   return (
-    <Form action="./FromLabel">
+    <Form action="/FromLabel" method="POST">
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
@@ -25,5 +25,3 @@ function BasicExample() {
     </Form>
   );
 }
-
-export default BasicExample;

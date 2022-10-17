@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { next } from '../store/modules/mbti';
+import { next, check } from '../store/modules/mbti';
 import Progress from './Progress';
 import SkyblueButton from './SkyblueButton';
 
@@ -27,6 +27,7 @@ export default function Mbti() {
               <SkyblueButton
                 text={el.text}
                 clickEvent={() => {
+                  dispatch(check(el.result));
                   dispatch(next());
                 }}
               />
